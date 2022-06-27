@@ -12,4 +12,6 @@ ul {
 
 .App {
   overflow-x: hidden;
+  width: 100%;
+  outline: solid black;
 }
