@@ -3,6 +3,7 @@ import React from "react";
 import {HashRouter, Route, Routes} from "react-router-dom";
 import {useState, createContext} from "react";
 import NavBar from "./Components/NavBar/NavBar";
+import HomePage from "./Pages/HomePage/HomePage";
 
 export const AppContext = createContext();
 
@@ -12,7 +13,7 @@ function App() {
         <div className="App">
           <HashRouter>
             <Routes>
-              <Route path="/" element={<NavBar />} />
+              <Route path="/" element={<> <NavBar /> <HomePage /> </>} />
             </Routes>
           </HashRouter>
         </div>

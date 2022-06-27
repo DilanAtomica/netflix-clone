@@ -1,0 +1,105 @@
+.homePage {
+    width: 100%;
+}
+
+.banner {
+    width: 100%;
+    height: 80vh;
+    background-image: url("https://image.tmdb.org/t/p/original/5gCRpff1ptTXA8t1smzgEi0z8Ea.jpg");
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+.banner-panel {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(20,20,20,.2);
+
+}
+
+.banner-bottomShadow {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 7.5rem;
+    background: linear-gradient(180deg,transparent,rgba(14,14,14,.6),#141414);
+}
+
+.banner-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+    outline: solid red;
+    padding: 0 4rem;
+}
+
+.banner-content > h1 {
+    color: white;
+    font-size: 3.5rem;
+    max-width: max-content;
+}
+
+.banner-buttons {
+    display: flex;
+    margin-top: 1.5rem;
+    max-width: max-content;
+}
+
+#playButton {
+    display: flex;
+    align-items: center;
+    background-color: #e50914;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2.5rem;
+    margin-right: 0.5rem;
+}
+
+#playIcon {
+    margin-right: 0.25rem !important;
+    color: white !important;
+    cursor: pointer;
+}
+
+#playButton > span {
+    font-size: 1rem;
+    color: white;
+}
+
+#moreInfoButton {
+    background-color: rgba(109,109,110,.7);
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 2.5rem;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+#infoIcon {
+    color: white;
+    margin-right: 0.5rem;
+}
+
+#moreInfoButton > span {
+    font-size: 1rem;
+    color: white;
+}
+
+.banner-content > p {
+    color: white;
+    max-width: 33rem;
+    line-height: 2rem;
+    font-size: 1.25rem;
+    margin-top: 1rem;
+}
