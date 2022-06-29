@@ -1,0 +1,152 @@
+
+.row {
+    padding: 1rem 0;
+
+}
+
+.row > h3 {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.row > h3 > a {
+    font-size: 23px;
+    text-decoration: none;
+    color: white;
+}
+
+.row > h3 > span {
+    color: white;
+    font-size: 0.9rem;
+    opacity: 0;
+    transform: translateX(-1rem);
+    display: inline-block;
+    cursor: pointer;
+    transition-property: max-width, opacity, transform, -webkit-transform;
+    transition-duration: 0.45s, 0.45s, 0.75s, 0.75s;
+    transition-timing-function: ease, ease, ease, ease;
+    transition-delay: 0s, 0s, 0s, 0s;
+
+}
+
+.row > h3 > span > #forwardIcon {
+    font-size: 0.8rem;
+    transform: translateY(0.15rem);
+}
+
+.row > h3:hover > span {
+    opacity: 1;
+    transform: translateX(0.5rem);
+}
+
+.carousel {
+    width: 100%;
+
+}
+
+#swiper {
+    width: 100%;
+    overflow: visible;
+}
+
+#swiper #swiperSlide {
+    transition: 0.3s !important;
+    width: 18rem !important;
+    cursor: pointer !important;
+}
+
+#swiper #swiperSlide:hover {
+    transform: scale(1.2);
+    z-index: 1;
+}
+
+#swiper #swiperSlide:first-child:hover {
+    margin: 0 2.25rem;
+}
+
+#swiper #swiperSlide > img {
+    width: 18rem;
+    cursor: pointer;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+#swiper #swiperSlide .darkPanel {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 18rem;
+    height: 100%;
+    border-radius: 5px;
+    background-color: black;
+    opacity: 0;
+    z-index: 1;
+    transition: 0.2s ease-out;
+}
+
+.hoveredMovie {
+    margin: 0 !important;
+    background: linear-gradient(1turn,rgba(0,0,0,.6),transparent 65%) !important;
+}
+
+.moveRight {
+    transform: translateX(3rem);
+}
+
+.moveLeft {
+    transform: translateX(-2rem);
+}
+
+.swiper-pagination {
+    top: -35px;
+    right: 4.5%;
+    left: auto!important;
+    bottom: auto!important;
+    width: auto!important;
+    opacity: 0;
+    transition: opacity .2s ease-out;
+}
+
+.swiper-pagination-show {
+    opacity: 1;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 0;
+    width: 12px;
+    height: 5px;
+    background-color: #aaa;
+}
+
+.swiper-pagination-bullet-active {
+
+}
+
+
+.swiper-button-next, .swiper-button-prev {
+    color: white !important;
+    opacity: 0 !important;
+    transform: translateY(-39%) !important;
+    transition: 0.3s;
+    height: 100% !important;
+    width: 3rem !important;
+
+}
+
+.swiper-button-prev {
+
+
+}
+
+.swiper-button-next {
+}
+
+.swiper-button-prev:hover {
+    opacity: 1 !important;
+}
+
+.swiper-button-next:hover {
+    opacity: 1 !important;
+}
