@@ -132,15 +132,21 @@
     transition: 0.3s;
     height: 100% !important;
     width: 3rem !important;
+    background: rgba(16,16,17,.5);
 
 }
 
 .swiper-button-prev {
-
+    left: 0 !important;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
 
 }
 
 .swiper-button-next {
+    right: 0 !important;
+    border-top-left-radius: 15px !important;
+    border-bottom-left-radius: 15px !important;
 }
 
 .swiper-button-prev:hover {
