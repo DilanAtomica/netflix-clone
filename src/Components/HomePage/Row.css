@@ -1,6 +1,7 @@
 
 .row {
     padding: 1rem 0;
+    padding-left: 5rem;
 
 }
 
@@ -54,6 +55,7 @@
     transition: 0.3s !important;
     width: 18rem !important;
     cursor: pointer !important;
+    overflow: hidden !important;
 }
 
 #swiper #swiperSlide:hover {
@@ -84,6 +86,7 @@
     opacity: 0;
     z-index: 1;
     transition: 0.2s ease-out;
+    pointer-events: none;
 }
 
 .hoveredMovie {
@@ -138,6 +141,7 @@
 
 .swiper-button-prev {
     left: 0 !important;
+    transform: translateX(-5rem) translateY(-39%) !important;
     border-top-right-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
 
@@ -156,3 +160,103 @@
 .swiper-button-next:hover {
     opacity: 1 !important;
 }
+
+.movieContent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 0.75rem;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transform: translateY(3rem);
+    opacity: 0;
+    transition: 0.5s ease-out;
+}
+
+.showMovieContent {
+    opacity: 1;
+    transform: translateY(0);
+}
+.movieContent-actions {
+    display: flex;
+
+}
+
+.movieContent-actions * {
+    font-size: 2.5rem !important;
+}
+
+.actionsCircle {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.actionsCircle:nth-child(2) {
+    margin-left: 0.75rem;
+}
+
+.actionsCircle:nth-child(3) {
+    margin-left: 0.75rem;
+}
+
+#actionsPlayIcon {
+    background-color: black !important;
+    color: white !important;
+    opacity: 1 !important;
+    transition: 0.3s !important;
+
+}
+
+#actionsPlayIcon:hover {
+    opacity: 0.7 !important;
+}
+
+#actionsAddIcon {
+    color: white !important;
+    transition: 0.3s !important;
+    opacity: 1 !important;
+}
+
+#actionsAddIcon:hover {
+    opacity: 0.7 !important;
+
+}
+#actionsExpandIcon {
+    color: white !important;
+    transition: 0.3s !important;
+    opacity: 1 !important;
+}
+
+#actionsExpandIcon:hover {
+    opacity: 0.7 !important;
+}
+
+.movieContent > h1 {
+    color: white;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+}
+
+.movieContent-genres {
+    margin-top: 0.25rem;
+}
+
+.movieContent-genres > span {
+    color: white;
+    font-size: 0.75rem;
+}
+
+.movieContent-genres > span:not(:first-child) {
+    margin-left: 0.5rem;
+}
+
+
+
+

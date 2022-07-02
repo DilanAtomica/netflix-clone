@@ -2,7 +2,6 @@
 .banner {
     width: 100%;
     height: 80vh;
-    background-image: url("https://image.tmdb.org/t/p/original/5gCRpff1ptTXA8t1smzgEi0z8Ea.jpg");
     background-size: cover;
     position: relative;
     display: flex;
