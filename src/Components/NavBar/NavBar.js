@@ -10,7 +10,6 @@ function NavBar(props) {
 
     const handleScroll = () => {
         const position = window.pageYOffset;
-        console.log(position);
         setScrollPosition(position);
     };
 

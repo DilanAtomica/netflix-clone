@@ -12,6 +12,7 @@ import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
 import CancelIcon from '@mui/icons-material/Cancel';
+import MovieInfoModal from "../../Components/MovieInfoModal/MovieInfoModal";
 
 function HomePage(props) {
 
@@ -133,9 +134,7 @@ function HomePage(props) {
            <Banner movieBanner={movieBanner} />
 
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={trendingList} imageType="landscape" category="Trending Now" />
-
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={trendingList} imageType="poster" category="Netflix Originals" />
-
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={actionList} imageType="landscape" category="Action" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={animationList} imageType="landscape" category="Animation" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={comedyList} imageType="landscape" category="Comedy" />
@@ -143,47 +142,6 @@ function HomePage(props) {
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={horrorList} imageType="landscape" category="Horror" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={thrillerList} imageType="landscape" category="Thriller" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={romanceList} imageType="landscape" category="Romance" />
-
-            <div className="movieInfoModal">
-                <div className="movieInfoContainer">
-                    <div className="topContent" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original//kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg)"}}>
-                        <div className="topContentHeader">
-                            <div className="actionsCircle">
-                                <CancelIcon id="exitButton" />
-                            </div>
-                        </div>
-                        <div className="topContentActions">
-                            <button id="playButton">
-                                <PlayArrowIcon id="playIcon" />
-                                <span>Play</span>
-                            </button>
-                            <div className="movieContent-actions">
-                                <div className="actionsCircle"><AddCircleOutlineIcon id="actionsAddIcon" /></div>
-                            </div>
-                        </div>
-                        <div className="movieInfoContainer-bottomShadow"></div>
-                    </div>
-                    <div className="bottomContent">
-                        <h1>The Shawshank Redemption</h1>
-                        <p>Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.</p>
-                        <h2>Info on <span>Dilwale Dulhania Le Jayenge</span></h2>
-                        <ul>
-                            <li>Genres: <span>Comedy, Drama, Romance</span></li>
-                            <li>First air date: <span>Comedy, Drama, Romance</span></li>
-                            <li>Average vote: <span>Comedy, Drama, Romance</span></li>
-                            <li>Original language: <span>Comedy, Drama, Romance</span></li>
-                            <li>Age classification: <span>Comedy, Drama, Romance</span></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
-
-
 
         </div>
     );

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import "./Row.css";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import {Swiper, SwiperSlide} from "swiper/react";
@@ -6,8 +6,18 @@ import {A11y, Navigation, Pagination} from "swiper";
 import PlayCircleIcon from '@mui/icons-material/PlayCircle';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
 import ArrowCircleDownIcon from '@mui/icons-material/ArrowCircleDown';
+import {AppContext} from "../../App";
 
 function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType}) {
+
+    const {getInfoModalData} = useContext(AppContext);
+
+    const handleClick = (e) => {
+        const mediaID = e.currentTarget.getAttribute("data-id");
+        const mediaType = e.currentTarget.getAttribute("data-mediatype");
+
+        getInfoModalData(mediaID, mediaType);
+    }
 
     return (
         <div className="row">
@@ -23,7 +33,7 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
                 >
 
                     {movieList.map(movie => (
-                        <SwiperSlide id="swiperSlide" key={movie.id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+                        <SwiperSlide id="swiperSlide" data-id={movie.id} data-mediatype={movie?.media_type} data- key={movie?.id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
                             <img className="carouselImg" src={imageType === "landscape"
                                 ? "https://image.tmdb.org/t/p/original" + movie?.backdrop_path
                                 : "https://image.tmdb.org/t/p/original" + movie?.poster_path}
