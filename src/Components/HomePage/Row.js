@@ -15,6 +15,7 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
     const handleClick = (e) => {
         const mediaID = e.currentTarget.getAttribute("data-id");
         const mediaType = e.currentTarget.getAttribute("data-mediatype");
+        console.log(e.currentTarget.getAttribute("data-mediatype"));
 
         getInfoModalData(mediaID, mediaType);
     }

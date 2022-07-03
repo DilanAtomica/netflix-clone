@@ -42,7 +42,7 @@ function MovieInfoModal({infoModal, showInfoModal}) {
                     <h2>Info on <span>{infoModal?.title}</span></h2>
                     <ul>
                         <li>Genres: <span>{infoModal.genres?.map(genre => (genre.name + " "))}</span></li>
-                        <li>Release date: <span>{infoModal?.first_air_date}</span></li>
+                        <li>Release date: <span>{infoModal?.first_air_date || infoModal?.release_date}</span></li>
                         <li>Average vote: <span>{infoModal?.vote_average}</span></li>
                         <li>Original language: <span>{infoModal?.original_language}</span></li>
                         <li>Age classification: <span>{infoModal?.adult === true ? "For Adults" : "Suitable for kids"}</span></li>

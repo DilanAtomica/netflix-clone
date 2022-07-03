@@ -22,7 +22,7 @@ function App() {
             setInfoModal(response.data);
             setShowInfoModal(true);
 
-        } else if(mediaType === "movie") {
+        } else {
             const API = "https://api.themoviedb.org/3/movie/" + mediaID + "?api_key=cd84bfb51d317868c15507e4f531548f&language=en-US";
             const response = await axios.get(API);
             console.log(response.data);
