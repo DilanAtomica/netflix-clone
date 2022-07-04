@@ -77,7 +77,6 @@ function HomePage(props) {
             const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=10749";
             const response = await axios.get(API);
             setRomanceList(response.data.results);
-            console.log(response.data.results)
         }
 
         getRomanceData();

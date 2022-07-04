@@ -34,7 +34,7 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
                 >
 
                     {movieList.map(movie => (
-                        <SwiperSlide id="swiperSlide" data-id={movie.id} data-mediatype={movie?.media_type} data- key={movie?.id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
+                        <SwiperSlide id="swiperSlide" data-id={movie.id} data-mediatype={movie?.media_type} key={movie?.id} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} onClick={handleClick}>
                             <img className="carouselImg" src={imageType === "landscape"
                                 ? "https://image.tmdb.org/t/p/original" + movie?.backdrop_path
                                 : "https://image.tmdb.org/t/p/original" + movie?.poster_path}
