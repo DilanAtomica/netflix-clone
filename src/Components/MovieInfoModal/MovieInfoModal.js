@@ -15,9 +15,20 @@ function MovieInfoModal({infoModal, showInfoModal}) {
         hideInfoModal();
     }
 
+    const doSomething = (e) => {
+        try {
+            if(e.target.firstElementChild.classList.contains("movieInfoContainer")) {
+                hideInfoModal();
+            }
+        } catch(error) {
+
+        }
+
+    }
+
 
     return (
-        <div className="movieInfoModal" style={{opacity: showInfoModal && "1", pointerEvents: showInfoModal && "auto"}}>
+        <div className="movieInfoModal" style={{opacity: showInfoModal && "1", pointerEvents: showInfoModal && "auto"}} onClick={doSomething}>
             <div className="movieInfoContainer" style={{transform: showInfoModal && "translateY(0)"}}>
                 <div className="topContent" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original" + infoModal?.backdrop_path}}>
                     <div className="topContentHeader">
