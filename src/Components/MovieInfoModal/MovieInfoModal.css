@@ -8,6 +8,9 @@
     left: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 20;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    pointer-events: none;
 }
 
 .movieInfoContainer {
@@ -16,10 +19,11 @@
     height: 90%;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
-
     z-index: 10;
     top: 5%;
     left: 30%;
+    transition: 0.8s;
+    transform: translateY(70%);
 }
 
 .topContent {
