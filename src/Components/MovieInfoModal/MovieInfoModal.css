@@ -120,6 +120,7 @@
     color: white !important;
     transition: 0.3s !important;
     opacity: 1 !important;
+    cursor: pointer;
 }
 
 .topContentActions #actionsAddIcon:hover {
