@@ -112,3 +112,55 @@
     font-size: 1.25rem;
     margin-top: 1rem;
 }
+
+@media only screen and (max-width: 400px) {
+   .banner {
+       height: 35rem;
+       align-items: flex-end;
+       justify-content: center;
+   }
+
+    .banner-content {
+        padding: 0 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 3rem;
+    }
+
+
+    .banner-content > h1 {
+        color: white;
+        font-size: 2rem;
+        max-width: max-content;
+    }
+
+    .banner-buttons {
+        margin-top: 0.5rem;
+    }
+
+    .banner-content > p {
+        color: white;
+        max-width: 33rem;
+        line-height: 1.25rem;
+        font-size: 0.9rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    #moreInfoButton {
+        padding: 0.4rem 1rem;
+    }
+
+    #moreInfoButton > span {
+        font-size: 0.9rem;
+    }
+
+    #playButton {
+        padding: 0.4rem 2rem;
+    }
+
+    #playButton > span {
+        font-size: 0.9rem;
+    }
+
+}

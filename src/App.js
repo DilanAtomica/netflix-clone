@@ -1,5 +1,5 @@
 import './App.css';
-import React from "react";
+import React, {useEffect} from "react";
 import {HashRouter, Route, Routes} from "react-router-dom";
 import {useState, createContext} from "react";
 import NavBar from "./Components/NavBar/NavBar";
@@ -13,6 +13,11 @@ function App() {
 
     const [infoModal, setInfoModal] = useState([]);
     const [showInfoModal, setShowInfoModal] = useState(false);
+    const [userWidth, setUserWidth] = useState(0);
+
+    useEffect(() => {
+        setUserWidth(window.innerWidth);
+    }, []);
 
     const getInfoModalData = async(mediaID, mediaType) => {
         if(mediaType === "tv") {
@@ -36,7 +41,7 @@ function App() {
     }
 
     return (
-      <AppContext.Provider value={{getInfoModalData, hideInfoModal}}>
+      <AppContext.Provider value={{getInfoModalData, hideInfoModal, userWidth}}>
         <div className="App">
             <MovieInfoModal infoModal={infoModal} showInfoModal={showInfoModal} />
           <HashRouter>

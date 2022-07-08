@@ -133,13 +133,14 @@ function HomePage(props) {
             movieList[i].classList.remove("moveLeft");
             movieList[i].lastElementChild.style.opacity = "0";
         }
-
     }
+
+
 
     return (
         <div className="homePage">
 
-           <Banner movieBanner={movieBanner} />
+           <Banner movieBanner={movieBanner}  />
 
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={trendingList} imageType="landscape" category="Trending Now" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={popularMovies} imageType="poster" category="Netflix Originals" />

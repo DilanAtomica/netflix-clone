@@ -181,6 +181,55 @@
     font-size: 0.9rem;
 }
 
+.bottomContent > ul > li:last-child {
+    padding-bottom: 0.5rem;
+}
+
 .bottomContent > ul > li > span {
     color: #dddddd;
+}
+
+
+@media only screen and (max-width: 400px) {
+    .movieInfoContainer{
+        width: 90%;
+        left: 5%
+    }
+
+    .topContent {
+        height: 30%;
+    }
+
+    .topContentActions {
+        margin-top: 5rem;
+    }
+
+    .topContentActions > #playButton {
+        padding: 0.35rem 2rem;
+    }
+
+    .movieInfoContainer-bottomShadow {
+        top: 16.75%;
+    }
+
+    .movieInfoContainer > .bottomContent {
+        height: max-content;
+    }
+
+    .bottomContent > h1 {
+        font-size: 1.25rem;
+    }
+
+    .bottomContent > p {
+        font-size: 0.8rem;
+    }
+
+    .bottomContent > h2 {
+        font-size: 1rem;
+    }
+
+    .bottomContent > ul > li {
+        font-size: 0.8rem;
+    }
+
 }

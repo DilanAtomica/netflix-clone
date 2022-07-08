@@ -10,7 +10,7 @@ import {AppContext} from "../../App";
 
 function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType}) {
 
-    const {getInfoModalData} = useContext(AppContext);
+    const {getInfoModalData, userWidth} = useContext(AppContext);
 
     const handleClick = (e) => {
         const mediaID = e.currentTarget.getAttribute("data-id");
@@ -26,9 +26,9 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
             <div className="carousel">
                 <Swiper id="swiper"
                         modules={[Navigation, Pagination, A11y]}
-                        slidesPerView={7}
+                        slidesPerView={userWidth <= 400 ? 1 : userWidth <= 800 ? 3 : userWidth <= 1300 ? 4 : userWidth <= 1800 ? 6 : 7}
                         spaceBetween={10}
-                        slidesPerGroup={7}
+                        slidesPerGroup={userWidth <= 400 ? 1 : userWidth <= 800 ? 3 : userWidth <= 1300 ? 4 : userWidth <= 1800 ? 6 : 7}
                         navigation
                         pagination={{ clickable: true }}
                 >
