@@ -33,7 +33,7 @@ function Banner({movieBanner}) {
 
 
     return (
-        <header style={{backgroundImage: userWidth > 400
+        <header style={{backgroundImage: userWidth > 800
                 ? "url(https://image.tmdb.org/t/p/original" + movieBanner?.backdrop_path + ")"
                 : "url(https://image.tmdb.org/t/p/original" + movieBanner?.poster_path + ")"}} className="banner">
             <div className="banner-content">

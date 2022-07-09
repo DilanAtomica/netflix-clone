@@ -190,7 +190,7 @@
 }
 
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 300px) and (max-width: 400px) {
     .movieInfoContainer{
         width: 90%;
         left: 5%
@@ -230,6 +230,26 @@
 
     .bottomContent > ul > li {
         font-size: 0.8rem;
+    }
+
+}
+
+@media only screen and (min-width: 700px) and (max-width: 800px) {
+    .movieInfoContainer{
+        width: 70%;
+        left: 15%;
+    }
+
+    .topContent {
+        height: 30%;
+    }
+
+    .topContentActions {
+        margin-top: 10rem;
+    }
+
+    .movieInfoContainer-bottomShadow {
+        top: 21.5%;
     }
 
 }

@@ -17,7 +17,21 @@ function App() {
 
     useEffect(() => {
         setUserWidth(window.innerWidth);
+        console.log("hey")
     }, []);
+
+   /* useEffect(() => {
+
+        function handleWindowResize() {
+            setUserWidth(window.innerWidth);
+        }
+
+        window.addEventListener('resize', handleWindowResize);
+
+        return () => {
+            window.removeEventListener('resize', handleWindowResize);
+        };
+    }, []); */
 
     const getInfoModalData = async(mediaID, mediaType) => {
         if(mediaType === "tv") {
