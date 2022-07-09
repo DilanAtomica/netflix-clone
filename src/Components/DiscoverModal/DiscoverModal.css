@@ -1,0 +1,31 @@
+.discoverModal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.65);
+    backdrop-filter: blur(10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: 10;
+    transition: 0.3s;
+    box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+    pointer-events: none;
+}
+
+.discoverModal > ul {
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.discoverModal > ul > li {
+    margin-bottom: 1.5rem;
+    cursor: pointer;
+}
+
+.discoverModal > ul > li:hover {
+    font-weight: 700;
+}

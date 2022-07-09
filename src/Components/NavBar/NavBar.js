@@ -7,7 +7,7 @@ import {useContext} from "react";
 import {AppContext} from "../../App";
 import NetflixNLogo from "../../images/netflixNLogo.png"
 
-function NavBar(props) {
+function NavBar({displayDiscoverModal}) {
 
     const {userWidth} = useContext(AppContext);
 
@@ -17,6 +17,10 @@ function NavBar(props) {
         const position = window.pageYOffset;
         setScrollPosition(position);
     };
+
+    const handleOnClick = () => {
+        displayDiscoverModal();
+    }
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll, { passive: true });
@@ -36,7 +40,7 @@ function NavBar(props) {
                     <li>New & Popular</li>
                     <li>My List</li>
                 </ul>
-                <div className="discoverContainer" style={{display: userWidth > 800 && "none"}}>
+                <div className="discoverContainer" style={{display: userWidth > 800 && "none"}} onClick={handleOnClick}>
                     <span>Discover<span><ArrowDropDownIcon id="discoverArrowIcon"/></span></span>
                 </div>
             </div>

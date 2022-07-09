@@ -6,6 +6,7 @@ import NavBar from "./Components/NavBar/NavBar";
 import HomePage from "./Pages/HomePage/HomePage";
 import MovieInfoModal from "./Components/MovieInfoModal/MovieInfoModal";
 import axios from "axios";
+import DiscoverModal from "./Components/DiscoverModal/DiscoverModal";
 
 export const AppContext = createContext();
 
@@ -13,6 +14,7 @@ function App() {
 
     const [infoModal, setInfoModal] = useState([]);
     const [showInfoModal, setShowInfoModal] = useState(false);
+    const [showDiscoverModal, setShowDiscoverModal] = useState(false);
     const [userWidth, setUserWidth] = useState(0);
 
     useEffect(() => {
@@ -20,7 +22,7 @@ function App() {
         console.log("hey")
     }, []);
 
-   /* useEffect(() => {
+    useEffect(() => {
 
         function handleWindowResize() {
             setUserWidth(window.innerWidth);
@@ -31,7 +33,7 @@ function App() {
         return () => {
             window.removeEventListener('resize', handleWindowResize);
         };
-    }, []); */
+    }, []);
 
     const getInfoModalData = async(mediaID, mediaType) => {
         if(mediaType === "tv") {
@@ -54,13 +56,22 @@ function App() {
         setShowInfoModal(false);
     }
 
+    const displayDiscoverModal = () => {
+        setShowDiscoverModal(true);
+    }
+
+    const hideDiscoverModal = () => {
+        setShowDiscoverModal(false);
+    }
+
     return (
       <AppContext.Provider value={{getInfoModalData, hideInfoModal, userWidth}}>
         <div className="App">
             <MovieInfoModal infoModal={infoModal} showInfoModal={showInfoModal} />
+            <DiscoverModal showDiscoverModal={showDiscoverModal} hideDiscoverModal={hideDiscoverModal} />
           <HashRouter>
             <Routes>
-              <Route path="/" element={<> <NavBar /> <HomePage /> </>} />
+              <Route path="/" element={<> <NavBar displayDiscoverModal={displayDiscoverModal}  /> <HomePage /> </>} />
             </Routes>
           </HashRouter>
         </div>

@@ -79,6 +79,8 @@
 
 }
 
+
+
 @media only screen and (min-width: 300px) and (max-width: 400px) {
     .navBar {
         padding-left: 1rem;
@@ -94,7 +96,7 @@
     }
 }
 
-@media only screen and (min-width: 700px) and (max-width: 800px) {
+@media only screen and (min-width: 401px) and (max-width: 800px) {
     .navBar {
         padding-left: 1rem;
     }
