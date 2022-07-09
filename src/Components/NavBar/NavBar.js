@@ -29,13 +29,16 @@ function NavBar(props) {
         <nav className="navBar" style={{background: scrollPosition === 0 && "none"}}>
             <div className="navBar-left">
                 <img id="logo" alt="logo" src={userWidth < 800 ? NetflixNLogo : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Netflix_2015_logo.svg/799px-Netflix_2015_logo.svg.png?20190206123158"} />
-                <ul>
+                <ul style={{display: userWidth < 800 && "none"}}>
                     <li>Home</li>
                     <li>TV Series</li>
                     <li>Movies</li>
                     <li>New & Popular</li>
                     <li>My List</li>
                 </ul>
+                <div className="discoverContainer" style={{display: userWidth > 800 && "none"}}>
+                    <span>Discover<span><ArrowDropDownIcon id="discoverArrowIcon"/></span></span>
+                </div>
             </div>
             <div className="navBar-right">
                 <SearchIcon id="searchIcon" />

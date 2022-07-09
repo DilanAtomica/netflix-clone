@@ -43,6 +43,17 @@
     color: #818484;
 }
 
+.discoverContainer {
+    color: white;
+    display: flex;
+    cursor: pointer;
+}
+
+.discoverContainer > span {
+    display: flex;
+}
+
+
 .navBar-right {
     display: flex;
     align-items: center;
@@ -76,12 +87,24 @@
    #logo {
        width: 1.5rem;
    }
+
+    .discoverContainer {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }
 
 @media only screen and (min-width: 700px) and (max-width: 800px) {
-
+    .navBar {
+        padding-left: 1rem;
+    }
 
     #logo {
         width: 2rem;
+    }
+
+    .discoverContainer {
+        padding-left: 16rem;
+        padding-right: 16rem;
     }
 }
