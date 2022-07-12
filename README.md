@@ -1,3 +1,11 @@
+### `Link to demo`
+
+https://dilanatomica.github.io/netflix-clone/
+
+### `About Project`
+
+A clone of Netflix made in React
+
 ### `npm start`
 
 Runs the app in the development mode.\
