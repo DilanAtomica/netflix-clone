@@ -21,7 +21,7 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
     }
 
     return (
-        <div className="row">
+        <section className="row">
             <h3><a href="#">{category}</a><span>Show all <ArrowForwardIosIcon id="forwardIcon" /></span></h3>
             <div className="carousel">
                 <Swiper id="swiper"
@@ -58,7 +58,7 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
 
                 </Swiper>
             </div>
-        </div>
+        </section>
     );
 }
 

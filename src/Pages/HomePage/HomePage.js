@@ -138,7 +138,7 @@ function HomePage(props) {
 
 
     return (
-        <div className="homePage">
+        <main className="homePage">
 
            <Banner movieBanner={movieBanner}  />
 
@@ -152,7 +152,7 @@ function HomePage(props) {
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={thrillerList} imageType="landscape" category="Thriller" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={romanceList} imageType="landscape" category="Romance" />
 
-        </div>
+        </main>
     );
 }
 

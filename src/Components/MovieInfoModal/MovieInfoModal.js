@@ -28,7 +28,7 @@ function MovieInfoModal({infoModal, showInfoModal}) {
 
 
     return (
-        <div className="movieInfoModal" style={{opacity: showInfoModal && "1", pointerEvents: showInfoModal && "auto"}} onClick={doSomething}>
+        <section className="movieInfoModal" style={{opacity: showInfoModal && "1", pointerEvents: showInfoModal && "auto"}} onClick={doSomething}>
             <div className="movieInfoContainer" style={{transform: showInfoModal && "translateY(0)"}}>
                 <div className="topContent" style={{backgroundImage: "url(https://image.tmdb.org/t/p/original" + infoModal?.backdrop_path}}>
                     <div className="topContentHeader">
@@ -60,7 +60,7 @@ function MovieInfoModal({infoModal, showInfoModal}) {
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 
