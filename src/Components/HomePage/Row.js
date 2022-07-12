@@ -26,9 +26,9 @@ function Row({handleMouseLeave, handleMouseEnter, movieList, category, imageType
             <div className="carousel">
                 <Swiper id="swiper"
                         modules={[Navigation, Pagination, A11y]}
-                        slidesPerView={userWidth <= 400 ? 1 : userWidth <= 800 ? 3 : userWidth <= 1300 ? 4 : userWidth <= 1800 ? 6 : 7}
+                        slidesPerView={userWidth <= 400 ? 2 : userWidth <= 800 ? 3 : userWidth <= 1300 ? 4 : userWidth <= 1800 ? 6 : 7}
                         spaceBetween={10}
-                        slidesPerGroup={userWidth <= 400 ? 1 : userWidth <= 800 ? 3 : userWidth <= 1300 ? 4 : userWidth <= 1800 ? 6 : 7}
+                        slidesPerGroup={userWidth <= 400 ? 2 : userWidth <= 800 ? 3 : userWidth <= 1300 ? 4 : userWidth <= 1800 ? 6 : 7}
                         navigation
                         pagination={{ clickable: true }}
                 >

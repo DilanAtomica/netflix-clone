@@ -2,7 +2,6 @@
 .row {
     padding: 1rem 0;
     padding-left: 5rem;
-
 }
 
 .row > h3 {
@@ -137,7 +136,6 @@
     height: 100% !important;
     width: 3rem !important;
     background: rgba(16,16,17,.5);
-
 }
 
 .swiper-button-prev {
@@ -258,8 +256,22 @@
     margin-left: 0.5rem;
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (min-width: 300px) and (max-width: 400px) {
+    .row {
+        padding-left: 1rem;
+    }
 
+    .swiper-button-prev {
+        transform: translateX(-1rem) translateY(-39%) !important;
+    }
+
+    #swiper #swiperSlide {
+        width: 10rem !important;
+    }
+
+    #swiper #swiperSlide > img {
+        width: 10rem !important;
+    }
 }
 
 
