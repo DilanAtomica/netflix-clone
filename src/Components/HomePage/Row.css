@@ -256,7 +256,7 @@
     margin-left: 0.5rem;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 400px) {
+@media only screen and (max-width: 400px) {
     .row {
         padding-left: 1rem;
     }

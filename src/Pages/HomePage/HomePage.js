@@ -7,12 +7,6 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Banner from "../../Components/HomePage/Banner";
 import Row from "../../Components/HomePage/Row";
-import PlayArrowIcon from "@mui/icons-material/PlayArrow";
-import PlayCircleIcon from "@mui/icons-material/PlayCircle";
-import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
-import ArrowCircleDownIcon from "@mui/icons-material/ArrowCircleDown";
-import CancelIcon from '@mui/icons-material/Cancel';
-import MovieInfoModal from "../../Components/MovieInfoModal/MovieInfoModal";
 
 function HomePage(props) {
 
@@ -30,24 +24,38 @@ function HomePage(props) {
 
 
     useEffect(()=> {
-        const getTrendingData = async() => {
-            const API = "https://api.themoviedb.org/3/trending/all/day?api_key=cd84bfb51d317868c15507e4f531548f";
-            const response = await axios.get(API);
-            console.log(response.data.results);
-            setTrendingList(response.data.results);
-            setMovieBanner(response.data.results[Math.floor(Math.random() * 20)]);
-        }
 
         const getMostPopularMovies = async() => {
             const API = "https://api.themoviedb.org/3/movie/popular?api_key=cd84bfb51d317868c15507e4f531548f";
             const response = await axios.get(API);
-            setPopularMovies(response.data.results);
+            const popularMovies = response.data.results;
+            setPopularMovies(popularMovies);
+            console.log(popularMovies);
+
+            setMovieBanner(response.data.results[Math.floor(Math.random() * 20)]);
+
+            let fakeTrendingMovies = [];
+
+            for(let i = popularMovies.length - 1; i >= 0; i--) {
+                fakeTrendingMovies.push(popularMovies[i]);
+            }
+
+            setTrendingList(fakeTrendingMovies);
         }
 
         const getActionData = async() => {
             const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=28";
             const response = await axios.get(API);
-            setActionList(response.data.results);
+            const actionMovies = response.data.results;
+            setActionList(actionMovies);
+
+            let fakeThrillerMovies = [];
+
+            for(let i = actionMovies.length - 1; i >= 0; i--) {
+                fakeThrillerMovies.push(actionMovies[i]);
+            }
+
+            setThrillerList(fakeThrillerMovies);
         }
 
         const getAnimationData = async() => {
@@ -62,38 +70,32 @@ function HomePage(props) {
             setComedyList(response.data.results);
         }
 
-        const getDramaData = async() => {
-            const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=18";
-            const response = await axios.get(API);
-            setDramaList(response.data.results);
-        }
-
         const getHorrorData = async() => {
             const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=27";
             const response = await axios.get(API);
             setHorrorList(response.data.results);
         }
 
-        const getThrillerData = async() => {
-            const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=53";
-            const response = await axios.get(API);
-            setThrillerList(response.data.results);
-        }
-
         const getRomanceData = async() => {
             const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=10749";
             const response = await axios.get(API);
-            setRomanceList(response.data.results);
+            const dramaMovies = response.data.results;
+            setRomanceList(dramaMovies);
+
+            let fakeDramaMovies = [];
+
+            for(let i = dramaMovies.length - 1; i >= 0; i--) {
+                fakeDramaMovies.push(dramaMovies[i]);
+            }
+
+            setDramaList(fakeDramaMovies);
         }
 
         getMostPopularMovies();
         getRomanceData();
-        getThrillerData();
         getHorrorData();
-        getDramaData();
         getAnimationData();
         getComedyData();
-        getTrendingData();
         getActionData();
     }, []);
 

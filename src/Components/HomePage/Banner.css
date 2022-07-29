@@ -113,7 +113,26 @@
     margin-top: 1rem;
 }
 
-@media only screen and (min-width: 300px) and (max-width: 400px) {
+@media only screen and (max-width: 800px) {
+    .banner {
+        align-items: flex-end;
+        justify-content: center;
+    }
+
+    .banner-content {
+        padding: 0 1rem;
+        align-items: center;
+        justify-content: flex-end;
+        padding-bottom: 3rem;
+    }
+
+    .banner-content > h1 {
+        text-align: center;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
    .banner {
        height: 35rem;
        align-items: flex-end;
@@ -161,19 +180,5 @@
 
     #playButton > span {
         font-size: 0.9rem;
-    }
-}
-
-@media only screen and (min-width: 700px) and (max-width: 800px) {
-    .banner {
-        align-items: flex-end;
-        justify-content: center;
-    }
-
-    .banner-content {
-        padding: 0 1rem;
-        align-items: center;
-        justify-content: flex-end;
-        padding-bottom: 3rem;
     }
 }

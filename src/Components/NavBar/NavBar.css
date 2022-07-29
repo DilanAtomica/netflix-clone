@@ -79,24 +79,7 @@
 
 }
 
-
-
-@media only screen and (min-width: 300px) and (max-width: 400px) {
-    .navBar {
-        padding-left: 1rem;
-    }
-
-   #logo {
-       width: 1.5rem;
-   }
-
-    .discoverContainer {
-        padding-left: 4rem;
-        padding-right: 4rem;
-    }
-}
-
-@media only screen and (min-width: 401px) and (max-width: 800px) {
+@media only screen and (max-width: 800px) {
     .navBar {
         padding-left: 1rem;
     }
@@ -108,5 +91,20 @@
     .discoverContainer {
         padding-left: 16rem;
         padding-right: 16rem;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .navBar {
+        padding-left: 1rem;
+    }
+
+   #logo {
+       width: 1.5rem;
+   }
+
+    .discoverContainer {
+        padding-left: 4rem;
+        padding-right: 4rem;
     }
 }

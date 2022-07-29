@@ -37,7 +37,7 @@ function Banner({movieBanner}) {
                 ? "url(https://image.tmdb.org/t/p/original" + movieBanner?.backdrop_path + ")"
                 : "url(https://image.tmdb.org/t/p/original" + movieBanner?.poster_path + ")"}} className="banner">
             <div className="banner-content">
-                <h1>{movieBanner.name}</h1>
+                <h1>{movieBanner.title}</h1>
                 <div className="banner-buttons" data-id={movieBanner.id} data-mediatype={movieBanner?.media_type} onClick={handleClick}>
                     <button id="playButton">
                         <PlayArrowIcon id="playIcon" />
