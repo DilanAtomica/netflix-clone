@@ -129,6 +129,10 @@
     .banner-content > h1 {
         text-align: center;
     }
+
+    .banner-content > p {
+        text-align: center;
+    }
 }
 
 
