@@ -250,14 +250,22 @@
 
     .bottomContent > h1 {
         font-size: 1.25rem;
+        padding-top: 0;
     }
 
     .bottomContent > p {
         font-size: 0.8rem;
+        padding-top: 0;
+        padding-bottom: 0;
     }
 
     .bottomContent > h2 {
         font-size: 1rem;
+        padding-top: 0.25rem;
+    }
+
+    .bottomContent > ul {
+        padding-top: 0;
     }
 
     .bottomContent > ul > li {
