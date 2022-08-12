@@ -15,7 +15,6 @@ function HomePage(props) {
     const [trendingList, setTrendingList] = useState([]);
     const [popularMovies, setPopularMovies] = useState([]);
     const [actionList, setActionList] = useState([]);
-    const [animationList, setAnimationList] = useState([]);
     const [comedyList, setComedyList] = useState([]);
     const [dramaList, setDramaList] = useState([]);
     const [horrorList, setHorrorList] = useState([]);
@@ -58,12 +57,6 @@ function HomePage(props) {
             setThrillerList(fakeThrillerMovies);
         }
 
-        const getAnimationData = async() => {
-            const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=16";
-            const response = await axios.get(API);
-            setAnimationList(response.data.results);
-        }
-
         const getComedyData = async() => {
             const API = "https://api.themoviedb.org/3/discover/movie?api_key=cd84bfb51d317868c15507e4f531548f&with_genres=35";
             const response = await axios.get(API);
@@ -94,7 +87,6 @@ function HomePage(props) {
         getMostPopularMovies();
         getRomanceData();
         getHorrorData();
-        getAnimationData();
         getComedyData();
         getActionData();
     }, []);
@@ -147,7 +139,6 @@ function HomePage(props) {
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={trendingList} imageType="landscape" category="Trending Now" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={popularMovies} imageType="poster" category="Netflix Originals" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={actionList} imageType="landscape" category="Action" />
-            <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={animationList} imageType="landscape" category="Animation" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={comedyList} imageType="landscape" category="Comedy" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={dramaList} imageType="landscape" category="Drama" />
             <Row handleMouseLeave={handleMouseLeave} handleMouseEnter={handleMouseEnter} movieList={horrorList} imageType="landscape" category="Horror" />
